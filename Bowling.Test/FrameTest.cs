@@ -33,11 +33,13 @@ public class FrameTest
     }
 
     [Test]
-    public void ASpareIsWorth10Points(){
+    public void ASpareIsWorth10PointsPlusNextBowl(){
         Frame f = new Frame("4/");
-        Assert.AreEqual(10, f.Score());
+        f.NextFrame = new Frame("43");
+        Assert.AreEqual(14, f.Score());
 
         f = new Frame("0/");
-        Assert.AreEqual(10, f.Score());
+        f.NextFrame = new Frame("34");
+        Assert.AreEqual(13, f.Score());
     }
 }

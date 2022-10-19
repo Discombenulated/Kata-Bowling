@@ -4,6 +4,11 @@ public class Frame
 {
     private const int MAX_SCORE = 10;
     private readonly string Bowled;
+    public Frame NextFrame{
+        private get;
+        set;
+    }
+
     public Frame(string bowled)
     {
         Bowled = bowled;
@@ -11,9 +16,13 @@ public class Frame
 
     public int Score()
     {
-        if (IsStrike() || IsSpare())
+        if (IsStrike())
         {
             return MAX_SCORE;
+        }
+
+        if (IsSpare()){
+            return MAX_SCORE + NextFrame.GetFirstBowl();
         }
 
         return GetFirstBowl() + GetSecondBowl();
