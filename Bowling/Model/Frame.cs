@@ -8,12 +8,16 @@ public class Frame
         Bowled = bowled;
     }
 
-    public double Score()
+    public int Score()
     {
         if (Bowled.Equals("X")){
             return 10;
         }
 
-        return 9;
+        int firstBowl = Int32.Parse(Bowled[0].ToString());
+        int secondBowl = Int32.Parse(Bowled[1].ToString());
+        int score = firstBowl + secondBowl;
+
+        return score;
     }
 }

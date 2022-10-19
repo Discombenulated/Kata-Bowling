@@ -21,5 +21,8 @@ public class FrameTest
     public void ScoreIsTotalOfPinsBowledIn2Attempts(){
         Frame f = new Frame("45");
         Assert.AreEqual(9, f.Score());
+
+        f = new Frame("61");
+        Assert.AreEqual(7, f.Score());
     }
 }
