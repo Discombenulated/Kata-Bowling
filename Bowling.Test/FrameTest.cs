@@ -11,10 +11,11 @@ public class FrameTest
     }
 
     [Test]
-    public void AStrikeIsWorth10Points()
+    public void AStrikeIsWorth10PointsPlusTheNextTwoBowls()
     {
         Frame f = new Frame("X");
-        Assert.AreEqual(10, f.Score());
+        f.NextFrame = new Frame("34");
+        Assert.AreEqual(17, f.Score());
     }
 
     [Test]

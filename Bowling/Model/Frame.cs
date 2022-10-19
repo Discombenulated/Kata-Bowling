@@ -18,7 +18,7 @@ public class Frame
     {
         if (IsStrike())
         {
-            return MAX_SCORE;
+            return MAX_SCORE + NextFrame.GetFirstBowl() + NextFrame.GetSecondBowl();
         }
 
         if (IsSpare()){
