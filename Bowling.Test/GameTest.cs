@@ -45,4 +45,10 @@ public class GameTest
         Game g = new Game("12 34 56");
         Assert.AreEqual(21, g.Score());
     }
+
+    [Test]
+    public void OriginalExampleTest(){
+        Game g = new Game("X 45 4/ 32");
+        Assert.AreEqual(46, g.Score());
+    }
 }
