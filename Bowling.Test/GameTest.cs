@@ -29,4 +29,14 @@ public class GameTest
         g.AddFrame(new Frame("10"));
         Assert.AreEqual(21, g.Score());
     }
+
+    [Test]
+    public void GameScoreIsAdditionOfFrameScoresIncludingStrikes()
+    {
+        Game g = new Game();
+        g.AddFrame(new Frame("45"));
+        g.AddFrame(new Frame("X"));
+        g.AddFrame(new Frame("12"));
+        Assert.AreEqual(25, g.Score());
+    }
 }
