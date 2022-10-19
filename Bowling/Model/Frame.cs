@@ -10,7 +10,7 @@ public class Frame
 
     public int Score()
     {
-        if (Bowled.Equals("X")){
+        if (Bowled.Equals("X") || Bowled.EndsWith("/")){
             return 10;
         }
 

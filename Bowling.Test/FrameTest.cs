@@ -31,4 +31,10 @@ public class FrameTest
         f = new Frame("03");
         Assert.AreEqual(3, f.Score());
     }
+
+    [Test]
+    public void ASpareIsWorth10Points(){
+        Frame f = new Frame("4/");
+        Assert.AreEqual(10, f.Score());
+    }
 }
