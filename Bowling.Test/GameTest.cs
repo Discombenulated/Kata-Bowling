@@ -39,4 +39,10 @@ public class GameTest
         g.AddFrame(new Frame("12"));
         Assert.AreEqual(25, g.Score());
     }
+
+    [Test]
+    public void CanConstructGameFromString(){
+        Game g = new Game("12 34 56");
+        Assert.AreEqual(21, g.Score());
+    }
 }
