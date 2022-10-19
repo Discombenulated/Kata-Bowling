@@ -27,5 +27,8 @@ public class FrameTest
 
         f = new Frame("40");
         Assert.AreEqual(4, f.Score());
+
+        f = new Frame("03");
+        Assert.AreEqual(3, f.Score());
     }
 }
