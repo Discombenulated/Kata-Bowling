@@ -19,4 +19,14 @@ public class GameTest
         g.AddFrame(new Frame("10"));
         Assert.AreEqual(15, g.Score());
     }
+
+    [Test]
+    public void GameScoreIsAdditionOfFrameScoresIncludingSpares()
+    {
+        Game g = new Game();
+        g.AddFrame(new Frame("45"));
+        g.AddFrame(new Frame("2/"));
+        g.AddFrame(new Frame("10"));
+        Assert.AreEqual(21, g.Score());
+    }
 }

@@ -10,6 +10,14 @@ public class Game
 
     public int Score()
     {
-        return (from frame in Frames select frame.Score()).Sum();
+        int score = 0;
+        for (int i = 0; i < Frames.Count; i++){
+            Frame current = Frames[i];
+            if (i < Frames.Count-1){
+                current.NextFrame = Frames[i+1];
+            }
+            score += current.Score();
+        }
+        return score;
     }
 }
