@@ -10,6 +10,10 @@ public class Frame
 
     public double Score()
     {
-        return 10;
+        if (Bowled.Equals("X")){
+            return 10;
+        }
+
+        return 9;
     }
 }

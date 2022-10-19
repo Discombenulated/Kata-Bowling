@@ -16,4 +16,10 @@ public class FrameTest
         Frame f = new Frame("X");
         Assert.AreEqual(10, f.Score());
     }
+
+    [Test]
+    public void ScoreIsTotalOfPinsBowledIn2Attempts(){
+        Frame f = new Frame("45");
+        Assert.AreEqual(9, f.Score());
+    }
 }
