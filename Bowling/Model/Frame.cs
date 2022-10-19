@@ -2,6 +2,7 @@ namespace Bowling.Model;
 
 public class Frame
 {
+    private const int MAX_SCORE = 10;
     private readonly string Bowled;
     public Frame(string bowled)
     {
@@ -12,12 +13,10 @@ public class Frame
     {
         if (IsStrike() || IsSpare())
         {
-            return 10;
+            return MAX_SCORE;
         }
 
-        int score = GetFirstBowl() + GetSecondBowl();
-
-        return score;
+        return GetFirstBowl() + GetSecondBowl();
     }
 
     private bool IsStrike()
