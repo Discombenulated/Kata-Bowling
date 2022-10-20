@@ -43,12 +43,15 @@ public class Frame
         if (IsStrike()){
             return MAX_SCORE;
         }
-        
+
         return Int32.Parse(Bowled[0].ToString());
     }
 
     private int GetSecondBowl()
     {
+        if (IsSpare()){
+            return MAX_SCORE - GetFirstBowl();
+        }
         return Int32.Parse(Bowled[1].ToString());
     }
 }
