@@ -20,6 +20,12 @@ public class FrameTest
         f = new Frame("X");
         f.NextFrame = new Frame("2/");
         Assert.AreEqual(20, f.Score());
+
+        f = new Frame("X");
+        Frame nextFrame = new Frame("X");
+        nextFrame.NextFrame = new Frame("X");
+        f.NextFrame = nextFrame;
+        Assert.AreEqual(30, f.Score());
     }
 
     [Test]
