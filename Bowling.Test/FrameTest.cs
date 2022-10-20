@@ -42,5 +42,13 @@ public class FrameTest
         f = new Frame("0/");
         f.NextFrame = new Frame("34");
         Assert.AreEqual(13, f.Score());
+
+        f = new Frame("1/");
+        f.NextFrame = new Frame("5/");
+        Assert.AreEqual(15, f.Score());
+
+        f = new Frame("2/");
+        f.NextFrame = new Frame("X");
+        Assert.AreEqual(20, f.Score());
     }
 }

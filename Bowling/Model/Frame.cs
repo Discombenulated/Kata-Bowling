@@ -40,6 +40,10 @@ public class Frame
 
     private int GetFirstBowl()
     {
+        if (IsStrike()){
+            return MAX_SCORE;
+        }
+        
         return Int32.Parse(Bowled[0].ToString());
     }
 
